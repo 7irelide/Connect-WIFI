@@ -1,9 +1,21 @@
-﻿# Variables globales
-$backupPath = "$env:USERPROFILE\Desktop\WifiBackup"
-$ssid = "Nom_de_Mon_WIFI"
-$key = "Password WIFi"
-$encryptionType = "WPA2PSK"
+﻿$backupPath = "$env:USERPROFILE\Desktop\WifiBackup"
+# Variables globales
+# Type de chiffrement utilisé par le réseau (WPA2-PSK dans ce cas)
+# Autres modes de chiffrement possibles :
+# - "WEP" : Wired Equivalent Privacy (ancien et peu sécurisé)
+# - "WPA" : Wi-Fi Protected Access (version initiale)
+# - "WPA2" : Wi-Fi Protected Access 2 (version plus sécurisée)
+# - "WPA3" : Wi-Fi Protected Access 3 (dernière version, la plus sécurisée)
+# - "WPA2PSK" : WPA2 avec clé pré-partagée (pour les réseaux domestiques)
+# - "WPA2ENT" : WPA2 Enterprise (pour les réseaux d'entreprise avec authentification 802.1X)
+# - "WPA3SAE" : WPA3 avec Simultaneous Authentication of Equals (plus sécurisé que WPA2PSK)
+# - "OPEN" : Aucun chiffrement (non sécurisé)
 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$ssid = "Nom_de_Mon_WIFI"  # SSID (nom) du réseau Wi-Fi auquel se connecter
+$key = "Password WIFi"     # Mot de passe du réseau Wi-Fi
+$encryptionType = "WPA2PSK" 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function Show-Menu {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════╗" -ForegroundColor Blue
